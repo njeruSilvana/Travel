@@ -1,0 +1,194 @@
+:root{
+    --PrimaryColor: hsl(199,100%,33%);
+    --SecondaryColor: hsl(187, 85%, 43%);
+    --gradientColor: linear-gradient(to right, hsl(187, 85%,43%), hsl(199,100%,33%));
+    --whiteColor: hsl(0,0%,100%);
+    --blackColor: hsl(201,33%,16%);
+    --whiteColorDeam: hsl(0,0%,93%);
+    --greyText: rgb(190,190,190);
+    --inputColor: rgb(219,239,239);
+    --bodyColor: rgb(240,240,240);
+    --cardBG: rgb(225,225,235);
+
+}
+.home{
+    width: 100%;
+    min-height: 200vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    
+
+    .overlay{
+       position: absolute; 
+       height: 100vh;
+       width: 100%;
+       background: rgb(47, 106, 127);
+       top: 0;
+       bottom: 0;
+       z-index: 1;
+       mix-blend-mode: hard-light;
+
+    }
+
+    video{
+       position: absolute; 
+       height: 150vh;
+       width: 100%;
+       top: 0;
+       left: 0;
+       object-fit: cover;
+       z-index: 1;
+      
+       
+    
+    }
+    .homecontent{
+        width: 100%;
+        height: max-content;
+        padding: 0rem 1.5rem 3rem;
+        display: flex;
+        row-gap: 3rem;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        margin: auto;
+        color: var(--whiteColor);
+        z-index: 100;
+    }
+    .textDiv{
+        padding: 2rem 0;
+
+
+        .smallText{
+            font-size: 30px;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+            color: var(--blackColor);
+            font-weight: bold;
+        }
+
+        .homeTitle{
+            position: relative;
+            font-size: 1.5rem;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+
+        }
+
+
+    }
+
+    .cardDiv{
+      position: relative;  
+      padding: 2rem 1rem;
+      background: var(--whiteColor);
+      border-radius: 10px;
+      gap: 1rem;
+
+      label{
+        display: block;
+        color: var(--blackColor);
+        padding-bottom: 10px;
+        font-size: 20px;
+        font-weight: 500;
+
+      }
+      .label_total{
+        justify-content: space-between;
+        align-items: center;
+
+        .total{
+            color: var(--blackColor);
+            font-size: 18px;
+            padding-bottom: 10px;
+
+
+
+        }
+      }
+
+      .input{
+        height: 40px;
+        padding: 0 1rem;
+        background: var(--inputColor);
+        border-radius: 3rem;
+
+        input{
+            background: none;
+            border: none;
+            outline: none;
+            font-size: 13px;
+            width: 100%;
+            font-weight: 500;
+
+            &::placeholder{
+                font-size: 15px;
+
+            }
+        }
+
+        .icon{
+            font-size: 18px;
+            color: var(--PrimaryColor);
+            margin-left: 10px;
+
+        }
+
+        .input[type=range]{
+            background: blue;
+
+        }
+
+      }
+      .search_option{
+        position: absolute;
+        background: var(--gradientColor);
+        width: max-content;
+        bottom: -1.7rem;
+        column-gap: .8rem;
+        padding: 5px 1rem;
+        border-radius: 3rem;
+        left: 50%;
+        transform: translate(-50%);
+        justify-content: center;
+        cursor: pointer;
+
+
+        &:hover{
+            background-color: var(--PrimaryColor);
+
+        }
+        .icon{
+            font-size: 18px;
+        }
+        span{
+            font-size: 13px;
+        }
+
+
+      }
+    }
+
+    .homeFooterIcons{
+        width: 100%;
+        justify-content: space-between;
+
+        .icons{
+          font-size: 20px;  
+          margin: 0 5px;
+          color: var(--whiteColor);
+          font-weight: 600;
+
+          &:hover{
+            color:var(--PrimaryColor) ;
+          }
+
+        }
+
+    }
+}
